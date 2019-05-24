@@ -17,7 +17,6 @@ const tweegoProcess = spawn(
 )
 
 // Log messages from the tweego process.
-utils.logClear()
 tweegoProcess.stderr.on('data', data => {
   data.toString().split('\n').forEach(message => {
     if (message.match(/^warning:\s+.*/)) {
